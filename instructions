@@ -1,0 +1,4 @@
+以本文件夹下的代码为例：
+build_project.sh 是全量构建工程的shell脚本，准备好pyx文件和setup.py才执行
+part_one.pyx和part_two.pyx是两个需要编译成动态库的py_modules，文件名就是其他代码引用时import需要的名字
+当把pyx和setup.py以及build_project.sh放在文件夹下时，会删除所有的其他文件，仅保留需要的so库,这两个so文件，就是你要的那两个module。
